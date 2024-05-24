@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         customColor: '#0e0f1a',
+        newColor:'#181129',
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
