@@ -13,19 +13,16 @@ const GlitterFollow = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Function to generate a random neon color
-    const getRandomColor = () => {
-      const neonColors = ['#ff00ff', '#00ffff', '#ffff00', '#ff00ff', '#00ff00', '#ff0000'];
-      return neonColors[Math.floor(Math.random() * neonColors.length)];
-    };
+    // Function to generate an orange color
+    const getOrangeColor = () => '#F87516';
 
     // Particle class
     class Particle {
-      constructor(x, y, size, color) {
+      constructor(x, y, size) {
         this.x = x;
         this.y = y;
         this.size = size;
-        this.color = color;
+        this.color = getOrangeColor();
         this.speedX = Math.random() * 4 - 2;
         this.speedY = Math.random() * 4 - 2;
         this.opacity = 1;
@@ -50,8 +47,7 @@ const GlitterFollow = () => {
     const createParticles = (x, y) => {
       for (let i = 0; i < 30; i++) {
         const size = Math.random() * 10 + 5;
-        const color = getRandomColor();
-        particles.push(new Particle(x, y, size, color));
+        particles.push(new Particle(x, y, size));
       }
     };
 
